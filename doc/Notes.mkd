@@ -1,0 +1,16 @@
+# Notes of actions
+
+## Initial setup
+
+Created directory with:
+
+bin
+lib/MyAdd/Schema/Result
+doc
+t
+
+And added the readme.
+
+Added cpanfile, and basic result classes for author and book, as well as schema root file
+
+Note: DH is very specific about the 'databases' attribute, must be SQLite, MySQL or something else... its int he code anyway.

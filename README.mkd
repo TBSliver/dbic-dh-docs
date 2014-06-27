@@ -1,0 +1,22 @@
+# Deployment Hander
+
+This repo is for developing better documentation for Deployment Handler,
+including full examples of various steps through a full deployment.
+
+## Requirements
+
+To run these scripts you will need to install the dependencies in the cpanfile:
+
+    cpanm --installdeps .
+
+You may also want to install sqlite3 from your package manager, so that you can
+inspect the created database file easily.
+
+## Instructions
+
+To deploy a brand new database, and fill it with data, all you need to run is:
+
+    perl bin/install.pl --install
+
+This will create a new sqlite database in the root of the checkout which you
+can inspect.
