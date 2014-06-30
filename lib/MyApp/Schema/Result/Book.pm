@@ -9,14 +9,14 @@ __PACKAGE__->load_components( qw/ InflateColumn::DateTime / );
 __PACKAGE__->table( 'books' );
 __PACKAGE__->add_columns(
   id        => {
-    data_type        => 'integer',
+    data_type         => 'integer',
     is_auto_increment => 1,
   },
   author_id => {
-    data_type        => 'integer',
+    data_type         => 'integer',
   },
   title     => {
-    data_type        => 'text',
+    data_type         => 'text',
   },
   purchase_date => {
     data_type         => 'datetime',
