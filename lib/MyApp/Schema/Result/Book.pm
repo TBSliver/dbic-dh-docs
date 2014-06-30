@@ -5,6 +5,7 @@ use warnings;
 
 use base 'DBIx::Class::Core';
 
+__PACKAGE__->load_components( qw/ InflateColumn::DateTime / );
 __PACKAGE__->table( 'books' );
 __PACKAGE__->add_columns(
   id        => {
@@ -16,6 +17,9 @@ __PACKAGE__->add_columns(
   },
   title     => {
     data_type        => 'text',
+  },
+  purchase_date => {
+    data_type         => 'datetime',
   },
 );
 
