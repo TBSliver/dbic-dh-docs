@@ -14,11 +14,13 @@ my $setup = 0;
 my $install = 0;
 my $force_overwrite = 0;
 my $drop_tables = 0;
+my $db_version = 0;
 GetOptions(
   'setup'           => \$setup,
   'install'         => \$install,
   'force_overwrite' => \$force_overwrite,
   'drop_tables'     => \$drop_tables,
+  'version=i'       => \$db_version,
 );
 
 my @db_conn_info = ( "dbi:SQLite:$Bin/../test.db" );
@@ -37,5 +39,9 @@ if( $setup ) {
 }
 
 if( $install ) {
-  $dh->install;
+  if ( $db_version ) {
+    $dh->install({ version => $db_version });
+  } else {
+    $dh->install;
+  }
 }
