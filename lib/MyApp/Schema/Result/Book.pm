@@ -20,6 +20,8 @@ __PACKAGE__->add_columns(
   },
   purchase_date => {
     data_type         => 'datetime',
+    is_nullable       => 1,
+    datetime_undef_if_invalid => 1,
   },
 );
 
